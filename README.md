@@ -1,5 +1,13 @@
 # Async. URL Status Checking
-As part of a 6 hour project, designed and implemeted a system to report on URL statuses from predefined JSON list.   
+As part of a 6 hour project, designed and implemeted a system to report on URL statuses from predefined JSON list.
+
+### Project Requirements
+- Need to check a list of urls at regular intervals, to make sure these are reachable and that we can get their content. The program will be fed from a JSON file with a list of predefined urls and check intervals. 
+- As output, provide **timestamp**,  **url** and **length of the body**. 
+- Need to respect _as much as possible_ the defined schedule. This means you have to think of a solution that isn't affected by the time a single URL takes, nor by the fact that some URLs fail. Consider the best design pattern for this.
+- Error handling in case a URL returns a code different than `200` (consider some URLs migh be permanently unreachable but some other might just have a temporary glitch..)
+- Data on the status of the system should be logged every minute (Num. URLs checked, Top 5 HTTP codes, URLs currently being checked, URL that has taken the longest to respond)
+- Consider that there might be a _huge_ list of urls, but the system has only limited resources (workers) for checking them 
 
 ### Setup:
 1. Set up your virtualenv (Python 2.7): `mkvirtualenv pagestatus`
