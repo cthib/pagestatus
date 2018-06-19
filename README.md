@@ -18,9 +18,8 @@ To use the system, use `python run.py`. The URLs and corresponding time interval
 
 The URL checker is separated into two classes, `PageStatusManager` and `PageStatus`. The `PageStatusManager` is the main entry point that spawns a thread for one `PageStatus` and continues to report on it every 60 seconds. Once the `PageStatus` is initialized and started, it will use the given list of URL/interval pairs to create new url_status threads at the correct times. 
 
-#### Extra info:
-- To attempt to reduce overhead of the system, it becomes inactive for the greatest common denominator of all URL intervals.
-- The current design doesn't deal with scalibility very well, but could be improved. By changing the PageStatus.urls dict to group the URLs with interval keys such as `{100: ["https://google.ca", "https://youtube.com"]}`. It seems more likely to have duplicate intervals rather than URLs. 
+#### Lessons learned:
+Spawning new threads is not the most memory efficient approach for I/O networking tasks. A better solution would be to use coroutines to check the status of the pages. I would like to improve upon this system by moving to Python3 and asyncio to allow for a higher _worker_ amount. 
 
 ### Test cases
 To run tests, change to the _pagestatus/_ dir and use `python pagestatus_test.py`.
