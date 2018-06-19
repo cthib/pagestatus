@@ -1,0 +1,6 @@
+[
+    { "url": "https://httpstat.us/200", "interval": 50},
+    { "url": "https://httpstat.us/404", "interval": 75},
+    { "url": "https://httpstat.us/403", "interval": 100},
+    { "url": "https://httpstat.us/500", "interval": 125}
+  ]

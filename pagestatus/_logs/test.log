@@ -1,0 +1,5 @@
+INFO:root: 2018-06-06 12:26:17.647870 - https://httpstat.us/200 - 0 Bytes
+ERROR:root:HTTPError: 2018-06-06 12:26:18.262141 (HTTP 403) - https://httpstat.us/403
+ERROR:root:HTTPError: 2018-06-06 12:26:19.695738 (HTTP 404) - https://httpstat.us/404
+ERROR:root:HTTPError: 2018-06-06 12:26:20.515266 (HTTP 500) - https://httpstat.us/500
+ERROR:root:URLError: 2018-06-06 12:26:20.521198 - http://somewr.ongurl

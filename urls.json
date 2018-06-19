@@ -1,0 +1,13 @@
+[
+  { "url": "http://cnn.com", "interval": 100},
+  { "url": "http://google.ca", "interval": 200},
+  { "url": "http://cnn.com", "interval": 150},
+  { "url": "http://httpbin.org/delay/20", "interval": 150},
+  { "url": "https://www.whitehouse.gov/", "interval": 180},
+  { "url": "https://abc.com/", "interval": 300},
+  { "url": "https://wrongurl.xyz", "interval": 100},
+  { "url": "http://www.ycombinator.com/", "interval": 250},
+  { "url": "https://httpstat.us/404", "interval": 120},
+  { "url": "https://httpstat.us/403", "interval": 250},
+  { "url": "https://httpstat.us/500", "interval": 100}
+]
